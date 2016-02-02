@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="stylesheet" href="ressources/bootstrap.min.css" type="text/css">
+</head>
+
+<body>
+
+<div class="container-fluid bg-inverse text-center" onclick="window.location='#'">
+	<div id="brand">TchouTchou</div>
+</div>
+
+
+<section id="page-home" class="container-fluid">
+
+
+	<h1>Accueil</h1>
+
+
+</section>
+
+
+<section id="page-first-connect" class="container-fluid">
+
+<h1>Tous à bord !</h1>
+<p>Entrez votre code postal pour voir les pédibus près de chez vous</p>
+
+	<form class="mainForm" action="#page-home">
+
+		<fieldset class="form-group">
+			<label for="inputPostCode" class="sr-only">Code postal</label>
+			<input id="PostCode" class="form-control" placeholder="Code postal" required autofocus>
+		</fieldset>
+
+		<a class="btn btn-primary btn-block" type="submit" href="#page-home">Chercher</a>
+
+	</form>
+
+</section>
+
+
+<style>
+
+.text-center { text-align: center; }
+[onclick]:hover { cursor: pointer; } /* Items with JS onclick actions get a pointer when hovered upon */
+
+section { text-align: center; margin-top: 2em; }
+
+section:not(:target) { display: none; }
+
+#page-first-connect { display: block; }
+section:target ~ #page-first-connect { display: none; }
+
+.mainForm { margin-top: 1em; }
+
+#brand { padding: .25em; font-size: 1.5em; }
+
+</style>
+
+<script src="ressources/bootstrap.min.js"></script>
+<script src="ressources/jquery.min.js"></script>
+
+<script>
+
+$( document ).ready(function() {
+
+//
+
+});
+
+</script>
+
+</html>
