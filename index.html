@@ -17,8 +17,64 @@
 <section id="page-home" class="container-fluid">
 
 
-	<h1>Accueil</h1>
+	<h1>Autour de chez moi</h1>
 
+	<div class="alert alert-success"><i class="fa fa-check"></i> TchouTchou a déjà plusieurs lignes à Viroflay !</div>
+
+
+	<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d21023.691634764094!2d2.1549899894514475!3d48.80171429111416!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e67c7287829c37%3A0x1c0b82c6e1d872e0!2s78220+Viroflay!5e0!3m2!1sen!2sfr!4v1455126996439" width="100%" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+
+	<hr>
+
+	<p>Voici les établissements déjà desservis :</p>
+
+	<p style="font-weight: bold;">
+		Ecole Primaire du Chêne<br/>
+		Ecole Maternelle des Aulnes
+	</p>
+
+	<hr>
+
+	<div class="alert alert-success"><i class="fa fa-check"></i>  Votre commune subventionne TchouTchou !</div>
+
+	<p>La semaine dernière, 74 enfants ont été pris en charge par TchouTchou, et ça n'a coûté que <strong>2€ / jour</strong> aux parents !</p>
+
+	<a href="#page-sub-kids" class="btn btn-primary btn-block btn-lg">Faire une estimation rapide <i class="fa fa-arrow-circle-right"></i></a>
+
+</section>
+
+<section id="page-sub-kids" class="container-fluid">
+
+	<h1>Estimation</h1>
+
+	<form class="mainForm text-left" action="#page-home" >
+
+		<fieldset class="form-group">
+			<label for="exampleInputEmail1">Prénom</label>
+			<input class="form-control" placeholder="Prénom de votre enfant" required autofocus>
+		</fieldset>
+
+		<fieldset class="form-group">
+			<label for="exampleInputEmail1">Etablissement</label>
+			<select class="form-control">
+				<option selected disabled></option>
+				<option>Ecole Primaire du Chêne</option>
+				<option>Ecole Maternelle du Chêne</option>
+			</select>
+		</fieldset>
+
+		<fieldset class="form-group">
+			<label for="exampleInputEmail1">Lieu de ramassage</label>
+			<div class="input-group">
+				<input id="PostCode" class="form-control" placeholder="Lieu de ramassage" required autofocus>
+				<div class="input-group-addon"><i class="fa fa-map-marker"></i></div>
+			</div>
+			</fieldset>
+		</fieldset>
+
+		<a class="btn btn-primary btn-block" type="submit" href="#page-home">Lancer l'estimation</a>
+
+	</form>
 
 </section>
 
@@ -31,8 +87,12 @@
 	<form class="mainForm" action="#page-home">
 
 		<fieldset class="form-group">
-			<label for="inputPostCode" class="sr-only">Code postal</label>
-			<input id="PostCode" class="form-control" placeholder="Code postal" required autofocus>
+			<div class="input-group">
+				<label for="inputPostCode" class="sr-only">Code postal</label>
+				<input id="PostCode" class="form-control" placeholder="Code postal" required autofocus>
+				<div class="input-group-addon"><i class="fa fa-map-marker"></i></div>
+			</div>
+			</fieldset>
 		</fieldset>
 
 		<a class="btn btn-primary btn-block" type="submit" href="#page-home">Chercher</a>
@@ -45,7 +105,11 @@
 <style>
 
 .text-center { text-align: center; }
+.text-left { text-align: left; }
 [onclick]:hover { cursor: pointer; } /* Items with JS onclick actions get a pointer when hovered upon */
+
+html { background-color: #eee; }
+body { background-color: white; max-width: 540px; min-height: 100vh; margin: auto; }
 
 section { text-align: center; margin-top: 2em; }
 
@@ -58,10 +122,13 @@ section:target ~ #page-first-connect { display: none; }
 
 #brand { padding: .25em; font-size: 1.5em; }
 
+
+
 </style>
 
 <script src="ressources/bootstrap.min.js"></script>
 <script src="ressources/jquery.min.js"></script>
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
 
 <script>
 
