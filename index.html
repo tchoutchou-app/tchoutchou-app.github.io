@@ -9,8 +9,10 @@
 
 <body>
 
+<div id="device-wrapper" class="iphone6">
+
 <div class="container-fluid bg-inverse text-center" onclick="window.location='#'">
-	<div id="brand">TchouTchou</div>
+	<div id="brand">TchouTchou!</div>
 </div>
 
 
@@ -95,12 +97,13 @@
 			</fieldset>
 		</fieldset>
 
-		<a class="btn btn-primary btn-block" type="submit" href="#page-home">Chercher</a>
+		<a class="btn btn-primary btn-block" type="submit" href="#page-home"><i class="fa fa-search"></i> Chercher</a>
 
 	</form>
 
 </section>
 
+</div>
 
 <style>
 
@@ -108,10 +111,30 @@
 .text-left { text-align: left; }
 [onclick]:hover { cursor: pointer; } /* Items with JS onclick actions get a pointer when hovered upon */
 
-html { background-color: #eee; }
-body { background-color: white; max-width: 540px; min-height: 100vh; margin: auto; }
+html { background-color: #eee; background-image: url('ressources/table.jpg'); background-size: cover; }
+body { background: none; }
 
-section { text-align: center; margin-top: 2em; }
+#device-wrapper {
+	margin: 10vh auto;
+	position: relative;
+}
+
+#device-wrapper section {
+	background-color: white;
+	overflow: hidden;
+}
+
+#device-wrapper.iphone6 {
+	height: 648px; width: 323px;
+	padding: 71px 18px 72px 18px;
+	background-image: url('ressources/iphone6.png');
+}
+
+#device-wrapper.iphone6 section {
+	min-height: 473px;
+}
+
+section { text-align: center; padding-top: 2em; background-color: #eee; }
 
 section:not(:target) { display: none; }
 
@@ -120,15 +143,18 @@ section:target ~ #page-first-connect { display: none; }
 
 .mainForm { margin-top: 1em; }
 
-#brand { padding: .25em; font-size: 1.5em; }
+#brand { padding: .25em; font-size: 1em; font-family: 'Short Stack'; }
+h1 { font-family: 'Short Stack'; font-size: 2.4em; text-transform: uppercase; }
 
-
+h1, h2, h3, h4, h5, h6, .special-font, .btn { font-family: 'Short Stack'; }
 
 </style>
 
 <script src="ressources/bootstrap.min.js"></script>
 <script src="ressources/jquery.min.js"></script>
 <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+
+<link href='https://fonts.googleapis.com/css?family=Short+Stack' rel='stylesheet' type='text/css'>
 
 <script>
 
